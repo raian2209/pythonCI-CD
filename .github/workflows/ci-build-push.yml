@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -63,7 +67,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           path: ./manifestsCI-PythonAPI
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.CROSS_REPO_PAT }}
           commit-message: "chore: Update image to ${{ env.IMAGE_TAG }}"
           branch: "automated-manifest-updates"
           title: "Automated Manifest Update"
