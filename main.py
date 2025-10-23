@@ -10,6 +10,10 @@ class HealthCheck(BaseModel):
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/teste")
+async def teste():
+    return {"message": "Teste CI-CD"}
+
 @app.get(
     "/health",
     tags=["healthcheck"],
