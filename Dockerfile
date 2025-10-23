@@ -4,7 +4,7 @@ FROM python:3.10-bullseye as builder
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --prefix="/install" -r requirements.txt
 
 COPY . .
 
@@ -18,6 +18,7 @@ RUN useradd --create-home appuser
 USER appuser
 
 # Copia as dependências e o código do estágio de builder
+COPY --from=builder /install /usr/local
 COPY --from=builder /app /app
 
 # Expõe a porta que a aplicação irá escutar
