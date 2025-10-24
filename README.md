@@ -10,7 +10,7 @@ Este projeto adota uma arquitetura GitOps baseada em dois repositórios distinto
       * **Responsabilidade:** Contém o código-fonte da aplicação FastAPI, os testes automatizados (`pytest`) e a definição do contêiner (`Dockerfile`).
       * **Pipeline de CI:** O workflow do GitHub Actions neste repositório é responsável por testar o código, construir a imagem Docker e publicá-la no Docker Hub com uma tag de versão semântica.
 
-2.  ** Registro de Contêiner (Docker Hub):**
+2.  **Registro de Contêiner (Docker Hub):**
 
       * **Responsabilidade:** Atua como o repositório central para as imagens Docker versionadas da aplicação. É a fonte de onde o cluster Kubernetes irá baixar os artefatos para implantação.
 
@@ -170,35 +170,35 @@ Para que o workflow funcione, os seguintes segredos devem ser configurados em **
 1. Build e push da imagem no Docke Hub
 Workflow Triger:
 
-!(./evidencias/BuildAplication.png)
+![Buildpush1](/evidencias/BuildAplication.png)
 
 Branch Modificada diretamente (DEV):
 
-!(./evidencias/BuildPush2.png)
+![Buildpush2](/evidencias/BuildPush2.png)
 
 Abre push na branch main:
 
-!(./evidencias/BuildPush.png)
+![Buildpush3](/evidencias/BuildPush.png)
 
 
 2. argoCD sincronizado
 
-!(./evidencias/argocd.png)
+![argocdSync](/evidencias/argocd.png)
 
 3. Get all Pods 
 
-!(./evidencias/getpods.png)
+![pods](/evidencias/getpods.png)
 
 4. response  da aplicação 
 
-!(./evidencias/response_ci.png)
+![ResponseBroswer](/evidencias/response_ci.png)
 
-!(./evidencias/response_ci2.png)
+![ResponseCurl](/evidencias/response_ci2.png)
 
 5. atualisação automatica:
 
 Foi feito um push , adicionando este endPoint a aplicação:
-!(./evidencias/testeci-cd2.png)
+![testecicd](/evidencias/testeci-cd2.png)
 
-Endpoint depois de sync na aplicação: 
-!(./evidencias/teste%20ci-cd.png)
+Endpoint funcionando depois de sync na aplicação: 
+![testecicd](/evidencias/teste%20ci-cd.png)
