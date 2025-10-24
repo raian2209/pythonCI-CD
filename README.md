@@ -187,13 +187,13 @@ Abre push na branch main:
 
 3. Get all Pods 
 
-![pods](./evidencias/getpods.png)
+![get](./evidencias/getpodst.png)
 
 4. response  da aplicação 
 
 ![ResponseBroswer](./evidencias/response_ci.png)
 
-![ResponseCurl](./evidencias/response_ci2.png)
+![Curl](./evidencias/response_cid.png)
 
 5. atualisação automatica:
 
