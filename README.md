@@ -1,7 +1,3 @@
-# pythonCI/CD
- CI/CD IN PYTHON APLICATION 
------
-
 # CI/CD com FastAPI, GitHub Actions e GitOps
 
 Este repositório contém uma aplicação FastAPI de exemplo e um pipeline de CI/CD robusto construído com GitHub Actions. O objetivo do projeto é automatizar o ciclo completo de desenvolvimento: desde a validação do código com testes até a entrega contínua em um cluster Kubernetes, seguindo as melhores práticas de GitOps.
