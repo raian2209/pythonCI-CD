@@ -170,35 +170,35 @@ Para que o workflow funcione, os seguintes segredos devem ser configurados em **
 1. Build e push da imagem no Docke Hub
 Workflow Triger:
 
-![Buildpush1](evidencias/BuildAplication.png)
+![Buildpush1](./evidencias/BuildAplication.png)
 
 Branch Modificada diretamente (DEV):
 
-![Buildpush2](evidencias/BuildPush2.png)
+![Buildpush2](./evidencias/BuildPush2.png)
 
 Abre push na branch main:
 
-![Buildpush3](evidencias/BuildPush.png)
+![Buildpush3](./evidencias/BuildPush.png)
 
 
 2. argoCD sincronizado
 
-![argocdSync](evidencias/argocd.png)
+![argocdSync](./evidencias/argocd.png)
 
 3. Get all Pods 
 
-![pods](evidencias/getpods.png)
+![pods](./evidencias/getpods.png)
 
 4. response  da aplicação 
 
-![ResponseBroswer](evidencias/response_ci.png)
+![ResponseBroswer](./evidencias/response_ci.png)
 
-![ResponseCurl](evidencias/response_ci2.png)
+![ResponseCurl](./evidencias/response_ci2.png)
 
 5. atualisação automatica:
 
 Foi feito um push , adicionando este endPoint a aplicação:
-![testecicd](evidencias/testeci-cd2.png)
+![testecicd](./evidencias/testeci-cd2.png)
 
 Endpoint funcionando depois de sync na aplicação: 
-![testecicd](evidencias/teste%20ci-cd.png)
+![testecicd](./evidencias/teste-ci-cd.png)
